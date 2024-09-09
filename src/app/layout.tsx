@@ -2,23 +2,21 @@ import { Metadata } from 'next';
 import * as React from 'react';
 
 import '@/styles/globals.css';
-// !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
-import '@/styles/colors.css';
+
+import Header from '@/components/header/Header';
 
 import { siteConfig } from '@/constant/config';
 
-// !STARTERCONF Change these default meta
-// !STARTERCONF Look at @/constant/config to change them
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(siteConfig.url || 'https://www.google.com'),
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.title}`,
   },
   description: siteConfig.description,
   robots: { index: true, follow: true },
-  // !STARTERCONF this is the default favicon, you can generate your own from https://realfavicongenerator.net/
-  // ! copy to /favicon folder
+  // !TODO-NADEEM generate an favicon icon
+  // !TODO-NADEEM to /favicon folder
   icons: {
     icon: '/favicon/favicon.ico',
     shortcut: '/favicon/favicon-16x16.png',
@@ -39,8 +37,9 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/og.jpg`],
-    // creator: '@th_clarence',
+    // creator: '@th_clarence', // !TODO-NADEEM
   },
+  // !TODO-NADEEM
   // authors: [
   //   {
   //     name: 'Theodorus Clarence',
@@ -56,7 +55,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <Header />
+
+        {children}
+      </body>
     </html>
   );
 }
