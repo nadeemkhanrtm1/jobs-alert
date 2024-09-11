@@ -1,5 +1,15 @@
 import * as React from 'react';
 
-export default function HomePage() {
-  return <main></main>;
+import NotionRenderer from '@/components/NotionRenderer';
+
+export default async function HomePage() {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/notion`
+  );
+  const result = await response.json();
+  return (
+    <>
+      <NotionRenderer recordMap={result} />
+    </>
+  );
 }

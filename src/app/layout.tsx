@@ -57,7 +57,6 @@ export default function RootLayout({
     <html>
       <body>
         <Header />
-
         {children}
       </body>
     </html>
