@@ -3,6 +3,7 @@ import * as React from 'react';
 
 import '@/styles/globals.css';
 
+import ContentContainer from '@/components/container/Container';
 import Header from '@/components/header/Header';
 
 import { siteConfig } from '@/constant/config';
@@ -57,7 +58,10 @@ export default function RootLayout({
     <html>
       <body>
         <Header />
-        {children}
+        <ContentContainer>
+          <ContentContainer.Main>{children}</ContentContainer.Main>
+          <ContentContainer.Summary>Summary</ContentContainer.Summary>
+        </ContentContainer>
       </body>
     </html>
   );

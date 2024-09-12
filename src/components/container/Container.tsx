@@ -17,15 +17,13 @@ const ContentContainer: React.FC<ContentContainerProps> & {
 
 // Child Component for Main Content
 ContentContainer.Main = ({ children }) => {
-  return (
-    <div className='md:w-7/10 w-full md:pr-8 mb-8 md:mb-0'>{children}</div>
-  );
+  return <div className='w-full md:pr-8 mb-8 md:mb-0'>{children}</div>;
 };
 
 // Child Component for Summary Headlines
 ContentContainer.Summary = ({ children }) => {
   return (
-    <div className='md:w-3/10 w-full'>
+    <div className='w-2/5 hidden md:block'>
       <div className='bg-gray-100 p-4 rounded-lg shadow-md'>
         <h2 className='text-xl font-semibold mb-4'>Summary Headlines</h2>
         {children}
