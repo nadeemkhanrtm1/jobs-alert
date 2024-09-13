@@ -8,7 +8,7 @@ type FeedType = { blogDetails: Array<BlogShortDetails> };
 
 const Feed: FC<FeedType> = ({ blogDetails }) => {
   return (
-    <div>
+    <div className='flex flex-col gap-10'>
       {blogDetails?.map((details, index) => (
         <FeedCard key={index} {...details} />
       ))}

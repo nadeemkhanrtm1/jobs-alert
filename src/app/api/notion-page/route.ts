@@ -15,8 +15,8 @@ export async function GET(request: Request) {
   }
 
   // const notion = new Client({ auth: NOTION_CONFIG.NOTION_API_KEY});
-  // // const response = await notion.blocks.retrieve({
-  // //   block_id: pageId || '' });
+  // const response = await notion.blocks.retrieve({
+  //   block_id: pageId || '' });
 
   //   const response = await notion.blocks.children.list({
   //     block_id: pageId || '',

@@ -1,11 +1,9 @@
-import { Client } from '@notionhq/client';
-
 import { NOTION_CONFIG } from '@/config/notion-dbs';
+import { notionClient } from '@/singleton/notion';
 
 export async function GET() {
-  const notion = new Client({ auth: NOTION_CONFIG.NOTION_API_KEY });
   const databaseId = NOTION_CONFIG.BLOGS_DATABASE_ID;
-  const response = await notion.databases.query({
+  const response = await notionClient.databases.query({
     database_id: databaseId,
     filter: {
       property: 'Published Date',
