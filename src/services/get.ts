@@ -24,6 +24,6 @@ export const get = async <T>({
     const response: T = await responseJson.json();
     return response;
   } catch (error) {
-    throw new Error('Failed to fetch');
+    return new Error('Failed to fetch') as T;
   }
 };

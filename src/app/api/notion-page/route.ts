@@ -1,5 +1,7 @@
 import { NotionAPI } from 'notion-client';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const pageId = url.searchParams.get('pageId');
@@ -13,15 +15,4 @@ export async function GET(request: Request) {
       status: 500,
     });
   }
-
-  // const notion = new Client({ auth: NOTION_CONFIG.NOTION_API_KEY});
-  // const response = await notion.blocks.retrieve({
-  //   block_id: pageId || '' });
-
-  //   const response = await notion.blocks.children.list({
-  //     block_id: pageId || '',
-  //     page_size: 50,
-  //   });
-  // console.log(response);
-  // return new Response(JSON.stringify(response), { status: 200 });
 }

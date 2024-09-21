@@ -5,7 +5,7 @@ export const prePareJobDetails = (
   apiResponse: any
 ): Array<BlogShortDetails> => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return apiResponse?.results.map((page: any) => ({
+  return apiResponse?.results?.map((page: any) => ({
     title: page.properties.Title.title[0]?.plain_text || '',
     summary: page.properties.Summary.rich_text[0]?.plain_text || '',
     slug: page.properties.slug.rich_text[0]?.plain_text || '',
