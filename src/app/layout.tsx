@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
 import * as React from 'react';
@@ -63,6 +64,7 @@ export default function RootLayout({
         <Header />
         <ContentContainer>{children}</ContentContainer>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
