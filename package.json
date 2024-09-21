@@ -24,7 +24,7 @@
     "cobe": "^0.6.3",
     "framer-motion": "^11.5.4",
     "lucide-react": "^0.438.0",
-    "next": "^14.2.7",
+    "next": "^14.2.3",
     "nextjs-toploader": "^3.6.15",
     "notion-client": "^6.16.0",
     "notion-types": "^6.16.0",
