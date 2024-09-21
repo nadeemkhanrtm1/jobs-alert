@@ -91,7 +91,7 @@ jobs:
           NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
           NEXT_PUBLIC_BLOGS_DATABASE_ID: ${{ secrets.BLOGS_DATABASE_ID }}
           NEXT_PUBLIC_NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-        run: ${{ steps.detect-package-manager.outputs.runner }} run build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
