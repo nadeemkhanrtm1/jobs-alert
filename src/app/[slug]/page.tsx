@@ -14,6 +14,10 @@ const slugNotionDatabaseMapper = {
   'ghar-se-kaam-mahilao-ke-liye': '1089589e6a2e806d9d30d99ddf8901c9',
 };
 
+export function generateStaticParams() {
+  return [{ slug: 'one-of-the-ways-to-make-money-online-work-from-home' }];
+}
+
 const BlogDetailsPage = async ({ params }: { params: { slug: string } }) => {
   const apiResponse = await get<ExtendedRecordMap>({
     endPoint: 'api/notion-page',
