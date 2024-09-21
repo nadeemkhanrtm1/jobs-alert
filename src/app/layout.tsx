@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
+import NextTopLoader from 'nextjs-toploader';
 import * as React from 'react';
 
 import '@/styles/globals.css';
 
 import ContentContainer from '@/components/container/Container';
+import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
 
 import { siteConfig } from '@/constant/config';
@@ -57,11 +59,10 @@ export default function RootLayout({
   return (
     <html>
       <body>
+        <NextTopLoader color='#000' />
         <Header />
-        <ContentContainer>
-          <ContentContainer.Main>{children}</ContentContainer.Main>
-          <ContentContainer.Summary>Summary</ContentContainer.Summary>
-        </ContentContainer>
+        <ContentContainer>{children}</ContentContainer>
+        <Footer />
       </body>
     </html>
   );

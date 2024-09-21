@@ -6,11 +6,12 @@ import NotionRenderer from '@/components/NotionRenderer';
 import { get } from '@/services/get';
 
 const slugNotionDatabaseMapper = {
-  'tech-mahindra-hiring-pune-hyd-june-2024': '69da0a279a814d7dad60b0f9545c5a43',
-  'infosys-hiring-it-professionals': '6a69d88e93a64d72967974195cf3558a',
-  'work-from-home-jobs-women-pregnant': '9f45fe5bcf21416395297bf6b90b6306',
-  'newly-mom-women-jobs': '60540a9482e042cd8f8434c9cc6fd418',
-  'fresher-bumper-hiring-2024': '5ba0abbe367b44ea87693ce19a22168d',
+  'one-of-the-ways-to-make-money-online-work-from-home':
+    '1069589e6a2e8076815cdfeb8a6bc2a2',
+  'create-once-and-get-money-always': '1089589e6a2e80d4aa58cfdd62813798',
+  'unlocking-online-earning-potential-students':
+    'dd4daf88675642e4a00df6cdbac48af5',
+  'ghar-se-kaam-mahilao-ke-liye': '1089589e6a2e806d9d30d99ddf8901c9',
 };
 
 const BlogDetailsPage = async ({ params }: { params: { slug: string } }) => {
